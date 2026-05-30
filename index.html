@@ -15,15 +15,14 @@
 <nav id="nav">
   <a class="brand" href="#top"><span class="mark">F</span><span><b>Focus</b><span class="tag">Dobermann Kennel</span></span></a>
   <div class="nav-links" id="navLinks">
-    <a href="#history" data-ro>Istoric</a><a href="#history" data-en>History</a>
-    <a href="#dogs" data-ro>Câinii noștri</a><a href="#dogs" data-en>Our Dogs</a>
-    <a href="#foundation" data-ro>Câini de bază</a><a href="#foundation" data-en>Foundation</a>
-    <a href="#gallery" data-ro>Galerie</a><a href="#gallery" data-en>Gallery</a>
-    <a href="#breed" data-ro>Rasa</a><a href="#breed" data-en>Breed</a>
-    <a href="#contact" data-ro>Contact</a><a href="#contact" data-en>Contact</a>
+    <a href="#history" data-ro>Istoric</a>
+    <a href="#dogs" data-ro>Câinii noștri</a>
+    <a href="#gallery" data-ro>Galerie</a>
+    <a href="#breed" data-ro>Rasa</a>
+    <a href="dobermann.html" data-ro>Dobermann</a>
+    <a href="#contact" data-ro>Contact</a>
   </div>
   <div class="nav-right">
-    <div class="lang-toggle"><button id="btnRo" class="active" onclick="setLang('ro')">RO</button><button id="btnEn" onclick="setLang('en')">EN</button></div>
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
   </div>
 </nav>
@@ -130,20 +129,6 @@
 </section>
 <div class="divider"></div>
 
-<section class="section" id="foundation">
-  <div class="reveal"><div class="eyebrow"><span data-ro>03 — Fundația liniei</span><span data-en>03 — Foundation of the line</span></div>
-  <h2 class="sec-title" data-ro>Câinii de bază</h2><h2 class="sec-title" data-en>Foundation dogs</h2>
-  <p class="sec-intro" data-ro>Câinii care au stat la baza liniei Focus — temperamentul și structura lor se regăsesc în generațiile actuale.</p>
-  <p class="sec-intro" data-en>The dogs at the foundation of the Focus line — their temperament and structure live on today.</p></div>
-  <div class="cards2">
-    <div class="xcard reveal d1"><div class="badge">T</div><div><h3>Graaf Tila v. Neerlands Stam</h3><div class="reg" data-ro>Mascul fondator · import 1997</div><div class="reg" data-en>Foundation male · imported 1997</div><p data-ro>Pilonul liniei. Câine de lucru remarcabil: BH 59/60 și SchH I „Excelent" (271 p, 100 la atac). Câștigător în 7 țări, Campion al Europei Centrale și de Est 1999, locul 2 Champion Class la Poznań 2000. Tată al numeroși campioni Focus.</p><p data-en>The line's cornerstone. Outstanding working dog: BH 59/60 and SchH I "Excellent" (271 pts, 100 at attack). Winner in 7 countries, Mid & East European Champion 1999, 2nd Champion Class at Poznań 2000. Sire of many Focus champions.</p></div></div>
-    <div class="xcard reveal d2"><div class="badge">B</div><div><h3>Blackness Bessy</h3><div class="reg" data-ro>Femelă fondatoare · import 1994</div><div class="reg" data-en>Foundation female · imported 1994</div><p data-ro>Una dintre cele două femele fondatoare. Fiica lui Jaron Royal Bell și nepoata lui Tor Bay de Amiluc — sânge de mare valoare la baza canisei.</p><p data-en>One of the two foundation females. Daughter of Jaron Royal Bell and granddaughter of Tor Bay de Amiluc — high-value blood at the base of the kennel.</p></div></div>
-    <div class="xcard reveal d1"><div class="badge">L</div><div><h3>Doriental Loren</h3><div class="reg" data-ro>Femelă fondatoare · import 1994</div><div class="reg" data-en>Foundation female · imported 1994</div><p data-ro>A doua femelă fondatoare. Împreună cu Bessy a marcat începutul oficial al liniei Focus.</p><p data-en>The second foundation female. Together with Bessy she marked the official start of the Focus line.</p></div></div>
-    <div class="xcard reveal d2"><div class="badge">V</div><div><h3>Vana Fortobella</h3><div class="reg" data-ro>Femelă · import 1997</div><div class="reg" data-en>Female · imported 1997</div><p data-ro>Femelă-pui importată în 1997, alături de Graaf Tila — generația care a consolidat tipul și calitatea de expoziție.</p><p data-en>Female puppy imported in 1997 alongside Graaf Tila — the generation that consolidated the kennel's type and show quality.</p></div></div>
-  </div>
-</section>
-<div class="divider"></div>
-
 <section class="section" id="gallery">
   <div class="reveal"><div class="eyebrow"><span data-ro>04 — Galerie</span><span data-en>04 — Gallery</span></div>
   <h2 class="sec-title" data-ro>Galerie</h2><h2 class="sec-title" data-en>Gallery</h2>
@@ -233,9 +218,6 @@
 <div class="lb" id="lb" onclick="closeLb()"><span class="close">&times;</span><img id="lbImg" src="" alt=""></div>
 
 <script>
-function setLang(l){document.documentElement.lang=l;
-  document.getElementById('btnRo').classList.toggle('active',l==='ro');
-  document.getElementById('btnEn').classList.toggle('active',l==='en');}
 function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
 document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
 const nav=document.getElementById('nav');
