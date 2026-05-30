@@ -80,41 +80,32 @@
 
 <section class="section" style="padding-top:40px">
   <div class="reveal"><div class="eyebrow"><span data-ro>Media</span><span data-en>Media</span></div>
-  <h2 class="sec-title" style="font-size:clamp(30px,5vw,52px)" data-ro>Galerie — Show & Lucru</h2><h2 class="sec-title" style="font-size:clamp(30px,5vw,52px)" data-en>Gallery — Show & Work</h2>
+  <h2 class="sec-title" style="font-size:clamp(30px,5vw,52px)" data-ro>Galerie</h2><h2 class="sec-title" style="font-size:clamp(30px,5vw,52px)" data-en>Gallery</h2>
   <p class="sec-intro" data-ro>Apasă pe imagine pentru a o mări. Sloturile marcate sunt pregătite pentru pozele și clipurile tale.</p>
   <p class="sec-intro" data-en>Tap an image to enlarge. The marked slots are ready for your photos and clips.</p></div>
 
   <div class="media-tabs reveal d1">
-    <button class="media-tab active" onclick="showMedia('show',this)"><span data-ro>Show</span><span data-en>Show</span></button>
-    <button class="media-tab" onclick="showMedia('work',this)"><span data-ro>Lucru</span><span data-en>Work</span></button>
+    <button class="media-tab active" onclick="showMedia('gallery',this)"><span data-ro>Galerie</span><span data-en>Gallery</span></button>
     <button class="media-tab" onclick="showMedia('video',this)"><span data-ro>Video</span><span data-en>Video</span></button>
   </div>
 
-  <div class="media-panel active" id="panel-show">
+  <div class="media-panel active" id="panel-gallery">
     <div class="gallery">
       <div class="g-item" onclick="openLb(this)"><img src="img/joyce.jpg" alt="joyce"><div class="cap">Joyce</div></div>
-      <div class="g-slot"><div><div class="plus">+</div><span data-ro>Adaugă poză</span><span data-en>Add photo</span><br><span style="font-size:9px;opacity:.6">joyce-show1.jpg</span></div></div>
-        <div class="g-slot"><div><div class="plus">+</div><span data-ro>Adaugă poză</span><span data-en>Add photo</span><br><span style="font-size:9px;opacity:.6">joyce-show2.jpg</span></div></div>
-        <div class="g-slot"><div><div class="plus">+</div><span data-ro>Adaugă poză</span><span data-en>Add photo</span><br><span style="font-size:9px;opacity:.6">joyce-show3.jpg</span></div></div>
-        <div class="g-slot"><div><div class="plus">+</div><span data-ro>Adaugă poză</span><span data-en>Add photo</span><br><span style="font-size:9px;opacity:.6">joyce-show4.jpg</span></div></div>
-        <div class="g-slot"><div><div class="plus">+</div><span data-ro>Adaugă poză</span><span data-en>Add photo</span><br><span style="font-size:9px;opacity:.6">joyce-show5.jpg</span></div></div>
-    </div>
-  </div>
-
-  <div class="media-panel" id="panel-work">
-    <div class="gallery">
-      <div class="g-slot"><div><div class="plus">+</div><span data-ro>Adaugă poză</span><span data-en>Add photo</span><br><span style="font-size:9px;opacity:.6">joyce-work1.jpg</span></div></div>
-        <div class="g-slot"><div><div class="plus">+</div><span data-ro>Adaugă poză</span><span data-en>Add photo</span><br><span style="font-size:9px;opacity:.6">joyce-work2.jpg</span></div></div>
-        <div class="g-slot"><div><div class="plus">+</div><span data-ro>Adaugă poză</span><span data-en>Add photo</span><br><span style="font-size:9px;opacity:.6">joyce-work3.jpg</span></div></div>
-        <div class="g-slot"><div><div class="plus">+</div><span data-ro>Adaugă poză</span><span data-en>Add photo</span><br><span style="font-size:9px;opacity:.6">joyce-work4.jpg</span></div></div>
-        <div class="g-slot"><div><div class="plus">+</div><span data-ro>Adaugă poză</span><span data-en>Add photo</span><br><span style="font-size:9px;opacity:.6">joyce-work5.jpg</span></div></div>
-        <div class="g-slot"><div><div class="plus">+</div><span data-ro>Adaugă poză</span><span data-en>Add photo</span><br><span style="font-size:9px;opacity:.6">joyce-work6.jpg</span></div></div>
+      <div class="g-item" onclick="openLb(this)"><img src="img/joyce-1.jpg" alt="Focus Javelin Joyce"><div class="cap">Focus Javelin Joyce</div></div>
+      <div class="g-item" onclick="openLb(this)"><img src="img/joyce-2.jpg" alt="Focus Javelin Joyce"><div class="cap">Focus Javelin Joyce</div></div>
+      <div class="g-item" onclick="openLb(this)"><img src="img/joyce-3.jpg" alt="Focus Javelin Joyce"><div class="cap">Focus Javelin Joyce</div></div>
+      <div class="g-item" onclick="openLb(this)"><img src="img/joyce-4.jpg" alt="Focus Javelin Joyce"><div class="cap">Focus Javelin Joyce</div></div>
+      <div class="g-item" onclick="openLb(this)"><img src="img/joyce-5.jpg" alt="Focus Javelin Joyce"><div class="cap">Focus Javelin Joyce</div></div>
+      <div class="g-item" onclick="openLb(this)"><img src="img/joyce-6.jpg" alt="Focus Javelin Joyce"><div class="cap">Focus Javelin Joyce</div></div>
+      <div class="g-item" onclick="openLb(this)"><img src="img/joyce-7.jpg" alt="Focus Javelin Joyce"><div class="cap">Focus Javelin Joyce</div></div>
+      <div class="g-item" onclick="openLb(this)"><img src="img/joyce-8.jpg" alt="Focus Javelin Joyce"><div class="cap">Focus Javelin Joyce</div></div>
     </div>
   </div>
 
   <div class="media-panel" id="panel-video">
     <div class="video-grid">
-      <div class="video-slot"><div><div class="plus">+</div><span data-ro>Adaugă video</span><span data-en>Add video</span><br><span style="font-size:9px;opacity:.6">joyce1.mp4</span></div></div>
+      <div class="video-item"><video controls preload="metadata" src="video/joyce-1.mp4"></video><div class="vcap"><span data-ro>Focus Javelin Joyce</span><span data-en>Focus Javelin Joyce</span></div></div>
         <div class="video-slot"><div><div class="plus">+</div><span data-ro>Adaugă video</span><span data-en>Add video</span><br><span style="font-size:9px;opacity:.6">joyce2.mp4</span></div></div>
         <div class="video-slot"><div><div class="plus">+</div><span data-ro>Adaugă video</span><span data-en>Add video</span><br><span style="font-size:9px;opacity:.6">joyce3.mp4</span></div></div>
     </div>
