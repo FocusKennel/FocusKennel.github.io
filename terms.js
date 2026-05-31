@@ -28,8 +28,6 @@
     // ——— Sănătate ———
     "HD": ["HD — displazia de șold",
       "Radiografie a șoldurilor, citită oficial. Scala FCI: A (perfect) → E (sever). Se reproduce doar din câini A sau B, pentru articulații sănătoase toată viața."],
-    "ED": ["ED — displazia de cot",
-      "Radiografie a coatelor. Scala 0 (normal) → 3. Se evaluează înainte de reproducere."],
     "DV": ["DV — citire oficială germană",
       "Rezultat citit de clubul german al rasei (Dobermann-Verein) — referință de încredere pentru HD."],
     "vWD": ["vWD — boala von Willebrand",

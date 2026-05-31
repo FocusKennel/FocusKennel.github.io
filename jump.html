@@ -17,7 +17,6 @@
     <a href="index.html#history">Istoric</a>
     <a href="index.html#dogs">Câinii noștri</a>
     <a href="index.html#memoriam">Dogs of the Past</a>
-    <a href="index.html#breed">Rasa</a>
     <a href="dobermann.html" class="nav-gazette">📰 Gazeta</a>
     <a href="index.html#contact">Contact</a>
   </div>
@@ -28,7 +27,7 @@
 </nav>
 
 <header class="dog-hero">
-  <div class="dog-hero-bg"><img src="img/jump.jpg" alt="jump"></div>
+  <div class="dog-hero-bg"><img class="blur" src="img/jump.jpg" alt="" aria-hidden="true"><img class="main" src="img/jump.jpg" alt="jump"></div>
   <div class="dog-hero-inner">
     <a class="back-link" href="index.html#dogs"><span>←</span> <span>Înapoi la câini</span></a>
     <div class="reg">Mascul · brown · 2023</div>
@@ -73,15 +72,9 @@
 <section class="section" style="padding-top:40px">
   <div class="reveal"><div class="eyebrow"><span>Media</span></div>
   <h2 class="sec-title" style="font-size:clamp(30px,5vw,52px)">Galerie</h2>
-  <p class="sec-intro">Apasă pe imagine pentru a o mări. Sloturile marcate sunt pregătite pentru pozele și clipurile tale.</p>
+  <p class="sec-intro">Apasă pe imagine pentru a o mări.</p>
   </div>
-
-  <div class="media-tabs reveal d1">
-    <button class="media-tab active" onclick="showMedia('gallery',this)"><span>Galerie</span></button>
-    <button class="media-tab" onclick="showMedia('video',this)"><span>Video</span></button>
-  </div>
-
-  <div class="media-panel active" id="panel-gallery">
+  <div class="media-panel active" id="panel-gallery" style="display:block">
     <div class="gallery">
       <div class="g-item" onclick="openLb(this)"><img src="img/jump.jpg" alt="jump"><div class="cap">Jump</div></div>
       <div class="g-item" onclick="openLb(this)"><img src="img/jump-1.jpg" alt="Focus Jump Around"><div class="cap">Focus Jump Around</div></div>
@@ -97,17 +90,6 @@
       <div class="g-item" onclick="openLb(this)"><img src="img/jump-11.jpg" alt="Focus Jump Around"><div class="cap">Focus Jump Around</div></div>
     </div>
   </div>
-
-  <div class="media-panel" id="panel-video">
-    <div class="video-grid">
-      <div class="video-slot"><div><div class="plus">+</div><span>Adaugă video</span><br><span style="font-size:9px;opacity:.6">jump1.mp4</span></div></div>
-        <div class="video-slot"><div><div class="plus">+</div><span>Adaugă video</span><br><span style="font-size:9px;opacity:.6">jump2.mp4</span></div></div>
-        <div class="video-slot"><div><div class="plus">+</div><span>Adaugă video</span><br><span style="font-size:9px;opacity:.6">jump3.mp4</span></div></div>
-    </div>
-    <p class="note">Pentru clipuri mari, înlocuiește un slot cu un embed YouTube. Pentru clipuri scurte (sub ~30 MB), pune fișierul .mp4 în folderul <b>video/</b>.</p>
-    
-  </div>
-
 <div class="pedigree-section">
   <div class="reveal"><div class="eyebrow"><span>Pedigree</span></div>
   <h2 class="sec-title" style="font-size:clamp(28px,4.5vw,46px)">Pedigree</h2></div>
@@ -151,7 +133,7 @@
 <div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Focus Never Ending Story</div></div></div>
 </div>
   </div>
-  <p class="ped-note">Pedigree pe 4 generații. Datele marcate indică anul nașterii și, unde e cazul, decesul.</p>
+  <p class="ped-note">Arbore genealogic pe 4 generații.</p>
 </div>
 
   <div class="dog-nav reveal">
