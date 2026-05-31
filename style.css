@@ -68,7 +68,9 @@ html[lang="en"] [data-en]{display:inline}
 .reveal.in{opacity:1;transform:none}
 .reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
 
-.hist-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:start;margin-top:54px}
+.hist-banner{margin-top:46px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.hist-banner img{width:100%;display:block;filter:contrast(1.02) saturate(1.02)}
+.hist-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:start;margin-top:46px}
 .hist-grid p{margin-bottom:18px;color:#cdd5df;font-size:16px}
 .hist-grid p strong{color:var(--gold-soft);font-weight:600}
 .timeline{border-left:1px solid var(--line);padding-left:28px;position:sticky;top:100px}
