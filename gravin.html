@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>„Gravin” — Focus Dobermann Kennel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-fx"></div>
+<nav id="nav" class="solid">
+  <a class="brand" href="index.html"><span class="mark">F</span><span><b>Focus</b><span class="tag">Dobermann Kennel</span></span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#history">Istoric</a>
+    <a href="index.html#dogs">Câinii noștri</a>
+    <a href="index.html#memoriam">In Memoriam</a>
+    <a href="index.html#breed">Rasa</a>
+    <a href="dobermann.html">Dobermann</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="nav-right"><button class="menu-btn" onclick="toggleMenu()">☰</button></div>
+</nav>
+
+<header class="dog-hero">
+  <div class="dog-hero-bg" style="background:linear-gradient(160deg,#161d27,#070a0f)"></div>
+  <div class="dog-hero-inner">
+    <a class="back-link" href="index.html#dogs"><span>←</span> Înapoi la câini</a>
+    <div class="reg">Femelă · negru · 2019</div>
+    <h1>Focus <em>Gravin</em> Beauty</h1>
+    <div class="nick">„Gravin”</div>
+  </div>
+</header>
+
+<section class="section" style="padding-top:60px">
+  <div class="facts reveal">
+      <div class="fact"><div class="k">Sex</div><div class="v">Femelă</div></div>
+      <div class="fact"><div class="k">Data nașterii</div><div class="v">2019-09-21</div></div>
+      <div class="fact"><div class="k">Culoare</div><div class="v">Negru</div></div>
+      <div class="fact"><div class="k">Crescător</div><div class="v">Focus Kennel</div></div>
+  </div>
+  <p class="sec-intro" style="margin-top:18px"><strong style="color:var(--gold-soft)">Părinți:</strong> Giddy Blossom Festus × Focus Whole Lotta Love</p>
+  
+</section>
+
+<section class="section" style="padding-top:20px">
+  <div class="reveal"><div class="eyebrow"><span>Titluri & realizări</span></div>
+  <h2 class="sec-title" style="font-size:clamp(30px,5vw,52px)">Palmares</h2></div>
+  <div class="titles reveal d1">
+      <div class="title-item"><div class="ty">BH</div><div class="tx">BH</div></div>
+      <div class="title-item"><div class="ty">Sport</div><div class="tx">IGP-1</div></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:40px">
+  <div class="reveal"><div class="eyebrow"><span>Sănătate</span></div>
+  <h2 class="sec-title" style="font-size:clamp(30px,5vw,52px)">Teste de sănătate</h2></div>
+  <div class="health-grid reveal d1">
+      <div class="health-item"><div class="icon">♿</div><div class="test">HD</div><div class="result">A</div><div class="sub">Șold · Germania</div></div>
+      <div class="health-item"><div class="icon">🧬</div><div class="test">DCM</div><div class="result">not found</div><div class="sub">ECHO</div></div>
+      <div class="health-item"><div class="icon">🧬</div><div class="test">Ochi</div><div class="result">clear</div><div class="sub">Italia</div></div>
+      <div class="health-item"><div class="icon">❤</div><div class="test">Cardio</div><div class="result">normal</div><div class="sub">examen</div></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:40px">
+  <div class="reveal"><div class="eyebrow"><span>Media</span></div>
+  <h2 class="sec-title" style="font-size:clamp(30px,5vw,52px)">Galerie</h2>
+  <p class="sec-intro">Apasă pe o imagine pentru a o mări.</p>
+  </div>
+
+  <div class="media-tabs reveal d1">
+    <button class="media-tab active" onclick="showMedia('gallery',this)">Galerie</button>
+    <button class="media-tab" onclick="showMedia('video',this)">Video</button>
+  </div>
+
+  <div class="media-panel active" id="panel-gallery">
+    <div class="gallery">
+      <div class="g-slot"><div><div class="plus">+</div><span>Adaugă poză</span></div></div>
+    </div>
+  </div>
+
+  <div class="media-panel" id="panel-video">
+    <div class="video-grid">
+      <div class="video-slot"><div><div class="plus">+</div><span>Adaugă video YouTube</span></div></div>
+    </div>
+    <p class="note">Pentru a adăuga un clip: ia codul video de pe YouTube (partea din link după <b>watch?v=</b>) și înlocuiește un slot cu <code>&lt;iframe src="https://www.youtube.com/embed/COD" allowfullscreen&gt;&lt;/iframe&gt;</code>.</p>
+  </div>
+
+<div class="pedigree-section">
+  <div class="reveal"><div class="eyebrow"><span>Pedigree</span></div>
+  <h2 class="sec-title" style="font-size:clamp(28px,4.5vw,46px)">Pedigree</h2></div>
+  <div class="ped-tree reveal d1">
+<div class="ped-col g1"><div class="ped-head">Părinți</div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Giddy Blossom Festus</div><div class="dt">2015-05-31</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Focus Whole Lotta Love</div><div class="dt">2013-05-12</div></div></div>
+</div>
+<div class="ped-col g2"><div class="ped-head">Bunici</div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Tahi-Reme Dali</div><div class="dt">2008-10-24 – 2020-12-28 (12y.2m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Theodora Titta Di Altobello</div><div class="dt">2012-04-20</div></div></div>
+<div class="ped-cell"><div class="ped-card male brown"><div class="nm"><span class="gsym">♂</span>Pride Of Russia Kaspij</div><div class="dt">2008-06-26 – 2019-06-06 (10y.11m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Focus Reggae Rules</div><div class="dt">2009-01-07</div></div></div>
+</div>
+<div class="ped-col g3"><div class="ped-head">Străbunici</div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Pathos Delle Querce Nere</div><div class="dt">2004-09-18 – 2013-10-28 (9y.1m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Tahi-Reme Giniti</div><div class="dt">2004-01-25 – 2014 (9y.10m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Maxim Di Altobello</div><div class="dt">2007-09-08 – 2014-02-02 (6y.4m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Tijana Daria Di Altobello</div><div class="dt">2009-03-07</div></div></div>
+<div class="ped-cell"><div class="ped-card male brown"><div class="nm"><span class="gsym">♂</span>Fedor del Nasi</div><div class="dt">2002-11-23 – 2011-11-25 (9y.)</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Euro Dinamika iz Zoosfery</div><div class="dt">2005-01-17 – 2014-12-23 (9y.11m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Pako Daker</div><div class="dt">2005-08-10 – 2013-12-19 (8y.4m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Focus Never Ending Story</div><div class="dt">2005-06-02</div></div></div>
+</div>
+<div class="ped-col g4"><div class="ped-head">Generația 4</div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Urbano del Diamante Nero</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Ninette Della Sinvessa</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Gino Gomez del Citone</div></div></div>
+<div class="ped-cell"><div class="ped-card female brown"><div class="nm"><span class="gsym">♀</span>Tahi-Reme Triniti</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Icarus di Altobello</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Daria Deniz Di Altobello</div></div></div>
+<div class="ped-cell"><div class="ped-card male brown"><div class="nm"><span class="gsym">♂</span>Bandit Di Altobello</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Lemira Shade Di Altobello</div></div></div>
+<div class="ped-cell"><div class="ped-card male brown"><div class="nm"><span class="gsym">♂</span>Baron Nike Renewal</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Akuna Matata de Grande Vinko</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Pimm%27s Number One iz Doma Domeni</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Mo de Stang-Zu</div></div></div>
+<div class="ped-cell"><div class="ped-card male brown"><div class="nm"><span class="gsym">♂</span>Baron Nike Renewal</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Ornella De Grande Vinko</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Cillian-Connor v. Jahrestal</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Focus Kahlua</div></div></div>
+</div>
+</div>
+  <p class="ped-note">Pedigree pe 4 generații. Datele indică anul nașterii și, unde e cazul, decesul. Sursă: doberbase.</p>
+</div>
+
+  <div class="dog-nav reveal">
+    <a class="prev" href="joyce.html"><div class="dir">← Câinele anterior</div><div class="nm">Focus Javelin Joyce</div></a>
+    <a class="next" href="jump.html"><div class="dir">Câinele următor →</div><div class="nm">Focus Jump Around</div></a>
+  </div>
+</section>
+
+<footer>
+  <div class="fb">Focus <em>Dobermann Kennel</em></div>
+  <p>© <span class="yr"></span> Focus Dobermann Kennel · București, România</p>
+</footer>
+
+<div class="lb" id="lb" onclick="closeLb()"><span class="close">&times;</span><img id="lbImg" src="" alt=""></div>
+<script>
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+function showMedia(which,btn){
+  document.querySelectorAll('.media-tab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.media-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');document.getElementById('panel-'+which).classList.add('active');}
+function openLb(el){document.getElementById('lbImg').src=el.querySelector('img').src;document.getElementById('lb').classList.add('open');}
+function closeLb(){document.getElementById('lb').classList.remove('open');}
+document.querySelectorAll('.yr').forEach(s=>s.textContent=new Date().getFullYear());
+</script>
+<script src="terms.js"></script>
+</body>
+</html>

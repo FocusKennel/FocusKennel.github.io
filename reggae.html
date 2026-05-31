@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reggae Rules — Focus Dobermann Kennel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-fx"></div>
+<nav id="nav" class="solid">
+  <a class="brand" href="index.html"><span class="mark">F</span><span><b>Focus</b><span class="tag">Dobermann Kennel</span></span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#history">Istoric</a>
+    <a href="index.html#dogs">Câinii noștri</a>
+    <a href="index.html#memoriam">In Memoriam</a>
+    <a href="index.html#breed">Rasa</a>
+    <a href="dobermann.html">Dobermann</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="nav-right"><button class="menu-btn" onclick="toggleMenu()">☰</button></div>
+</nav>
+
+<header class="dog-hero">
+  <div class="dog-hero-bg" style="background:linear-gradient(160deg,#161d27,#070a0f)"></div>
+  <div class="dog-hero-inner">
+    <a class="back-link" href="index.html#memoriam"><span>←</span> Înapoi la câini</a>
+    <div class="reg">Femelă · negru · 2009 – 2016</div>
+    <h1>Focus <em>Reggae Rules</em></h1>
+    
+  </div>
+</header>
+
+<section class="section" style="padding-top:60px">
+  <div class="facts reveal">
+      <div class="fact"><div class="k">Sex</div><div class="v">Femelă</div></div>
+      <div class="fact"><div class="k">Născută</div><div class="v">2009-01-07</div></div>
+      <div class="fact"><div class="k">Plecată</div><div class="v">2016</div></div>
+      <div class="fact"><div class="k">Culoare</div><div class="v">Negru</div></div>
+  </div>
+  <p class="sec-intro" style="margin-top:18px"><strong style="color:var(--gold-soft)">Părinți:</strong> Pako Daker × Focus Never Ending Story</p>
+  <p class="sec-intro" style="margin-top:6px;font-style:italic;color:var(--gold-soft)">În amintirea Reggae Rules. ✦</p>
+</section>
+
+<section class="section" style="padding-top:20px">
+  <div class="reveal"><div class="eyebrow"><span>Titluri & realizări</span></div>
+  <h2 class="sec-title" style="font-size:clamp(30px,5vw,52px)">Palmares</h2></div>
+  <div class="titles reveal d1">
+      <div class="title-item"><div class="ty">ZTP</div><div class="tx">ZTP: V1A</div></div>
+      <div class="title-item"><div class="ty">BH</div><div class="tx">BH</div></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:40px">
+  <div class="reveal"><div class="eyebrow"><span>Sănătate</span></div>
+  <h2 class="sec-title" style="font-size:clamp(30px,5vw,52px)">Teste de sănătate</h2></div>
+  <div class="health-grid reveal d1">
+      <div class="health-item"><div class="icon">♿</div><div class="test">HD</div><div class="result">A</div><div class="sub">Șold</div></div>
+      <div class="health-item"><div class="icon">🧬</div><div class="test">PHTVL/PHPV</div><div class="result">free</div><div class="sub">Ochi</div></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:40px">
+  <div class="reveal"><div class="eyebrow"><span>Media</span></div>
+  <h2 class="sec-title" style="font-size:clamp(30px,5vw,52px)">Galerie</h2>
+  <p class="sec-intro">Apasă pe o imagine pentru a o mări.</p>
+  </div>
+
+  <div class="media-tabs reveal d1">
+    <button class="media-tab active" onclick="showMedia('gallery',this)">Galerie</button>
+    <button class="media-tab" onclick="showMedia('video',this)">Video</button>
+  </div>
+
+  <div class="media-panel active" id="panel-gallery">
+    <div class="gallery">
+      <div class="g-slot"><div><div class="plus">+</div><span>Adaugă poză</span></div></div>
+    </div>
+  </div>
+
+  <div class="media-panel" id="panel-video">
+    <div class="video-grid">
+      <div class="video-slot"><div><div class="plus">+</div><span>Adaugă video YouTube</span></div></div>
+    </div>
+    <p class="note">Pentru a adăuga un clip: ia codul video de pe YouTube (partea din link după <b>watch?v=</b>) și înlocuiește un slot cu <code>&lt;iframe src="https://www.youtube.com/embed/COD" allowfullscreen&gt;&lt;/iframe&gt;</code>.</p>
+  </div>
+
+<div class="pedigree-section">
+  <div class="reveal"><div class="eyebrow"><span>Pedigree</span></div>
+  <h2 class="sec-title" style="font-size:clamp(28px,4.5vw,46px)">Pedigree</h2></div>
+  <div class="ped-tree reveal d1">
+<div class="ped-col g1"><div class="ped-head">Părinți</div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Pako Daker</div><div class="dt">2005-08-10 – 2013-12-19 (8y.4m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Focus Never Ending Story</div><div class="dt">2005-06-02</div></div></div>
+</div>
+<div class="ped-col g2"><div class="ped-head">Bunici</div>
+<div class="ped-cell"><div class="ped-card male brown"><div class="nm"><span class="gsym">♂</span>Baron Nike Renewal</div><div class="dt">1995-11-08 – 2007-12-20 (12y.1m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Ornella De Grande Vinko</div><div class="dt">2003-06-21 – 2010-07-12 (7y.)</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Cillian-Connor v. Jahrestal</div><div class="dt">1999-08-29 – 2008-01-01 (8y.4m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Focus Kahlua</div><div class="dt">2002-08-10 – 2008-03 (5y.6m.)</div></div></div>
+</div>
+<div class="ped-col g3"><div class="ped-head">Străbunici</div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Prinz vom Norden Stamm</div><div class="dt">1988-10-27 – 2001-01-01 (12y.2m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Borana Sawages</div><div class="dt">1993-05-28 – 1996-01-01 (2y.7m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Adamant de Grande Vinko</div><div class="dt">2001-03-22 – 2006-05-13 (5y.1m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Shardonne Sherau de Grande Vinko</div><div class="dt">2000-12-29 – 2006-01-25 (5y.)</div></div></div>
+<div class="ped-cell"><div class="ped-card male brown"><div class="nm"><span class="gsym">♂</span>Baron Nike Renewal</div><div class="dt">1995-11-08 – 2007-12-20 (12y.1m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Viteza Fortobella</div><div class="dt">1997-08-11</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Tamerlan iz Slavnoi Stai</div><div class="dt">1998-02-08 – 2005-06-09 (7y.4m.)</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Vana Fortobella</div><div class="dt">1997-08-11 – 2006-04-25 (8y.8m.)</div></div></div>
+</div>
+<div class="ped-col g4"><div class="ped-head">Generația 4</div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Quinn Dei Nobili Nati</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Kastra vom Norden Stamm</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Graaf Festus van Neerlands Stam</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Heidy Royal Bell</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Tigr iz Slavnoi Stai</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Ak-Yar Andromeda</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Finito di Emergo</div></div></div>
+<div class="ped-cell"><div class="ped-card female brown"><div class="nm"><span class="gsym">♀</span>Grafinya Shanel-San de Vinko</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Prinz vom Norden Stamm</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Borana Sawages</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Jivago v.h. Wantij</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Elektra Fortobella</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Ugor Di Villa Conte</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Indira v.d. Rauberhohle</div></div></div>
+<div class="ped-cell"><div class="ped-card male"><div class="nm"><span class="gsym">♂</span>Jivago v.h. Wantij</div></div></div>
+<div class="ped-cell"><div class="ped-card female"><div class="nm"><span class="gsym">♀</span>Elektra Fortobella</div></div></div>
+</div>
+</div>
+  <p class="ped-note">Pedigree pe 4 generații. Datele indică anul nașterii și, unde e cazul, decesul. Sursă: doberbase.</p>
+</div>
+
+  <div class="dog-nav reveal">
+    <a class="prev" href="lotta.html"><div class="dir">← Câinele anterior</div><div class="nm">Focus Whole Lotta Love</div></a>
+    <a class="next" href="shotgun.html"><div class="dir">Câinele următor →</div><div class="nm">Focus Shotgun</div></a>
+  </div>
+</section>
+
+<footer>
+  <div class="fb">Focus <em>Dobermann Kennel</em></div>
+  <p>© <span class="yr"></span> Focus Dobermann Kennel · București, România</p>
+</footer>
+
+<div class="lb" id="lb" onclick="closeLb()"><span class="close">&times;</span><img id="lbImg" src="" alt=""></div>
+<script>
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+function showMedia(which,btn){
+  document.querySelectorAll('.media-tab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.media-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');document.getElementById('panel-'+which).classList.add('active');}
+function openLb(el){document.getElementById('lbImg').src=el.querySelector('img').src;document.getElementById('lb').classList.add('open');}
+function closeLb(){document.getElementById('lb').classList.remove('open');}
+document.querySelectorAll('.yr').forEach(s=>s.textContent=new Date().getFullYear());
+</script>
+<script src="terms.js"></script>
+</body>
+</html>
