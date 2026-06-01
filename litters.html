@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Litierele noastre — Focus Dobermann Kennel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-fx"></div>
+<nav id="nav" class="solid">
+  <a class="brand" href="index.html"><span class="mark">F</span><span><b>Focus</b><span class="tag">Dobermann Kennel</span></span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#history">Istoric</a>
+    <a href="index.html#dogs">Câinii noștri</a>
+    <a href="litters.html" class="active">Litiere</a>
+    <a href="index.html#memoriam">Dogs of the Past</a>
+    <a href="dobermann.html" class="nav-gazette">📰 Gazeta</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <a class="nav-fb" href="https://www.facebook.com/focusdobermann" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg></a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<header class="paper-masthead">
+  <a class="back-link" href="index.html"><span>←</span> Acasă</a>
+  <div class="mast-rule">Litierele Focus · din 1996</div>
+  <h1 class="mast-title">Litierele <em>noastre</em></h1>
+  <p class="mast-sub">Fiecare montă, o decizie planificată. De-a lungul a trei decenii am parcurs alfabetul de două ori — iată câteva dintre litierele care au construit linia Focus. Apasă pe oricare pentru afișul complet.</p>
+</header>
+
+<section class="litter-group" style="padding-top:30px">
+  <div class="reveal"><div class="eyebrow"><span>Generația actuală</span></div></div>
+  <div class="litter-list">
+
+    <button class="litter-card planned reveal" onclick="openLB('','','Litiera K — în pregătire. Detalii în curând.')">
+      <div class="litter-letter">K</div>
+      <div class="litter-info">
+        <span class="lt-tag">Planificată</span>
+        <div class="lt-parents">Litiera K — în pregătire</div>
+        <div class="lt-meta"><span><b>Curând</b></span><span>Scrie-ne pentru detalii și listă de așteptare</span></div>
+      </div>
+      <div class="litter-cta">Contact →</div>
+    </button>
+
+    <button class="litter-card reveal" onclick="openLB('img/litter-j.jpg','img/litter-j-pups.jpg','Litiera J · Yanick del Colle Della Guardia × Focus Gravin Beauty · 21.05.2023')">
+      <div class="litter-letter">J</div>
+      <div class="litter-info">
+        <div class="lt-parents">Yanick del Colle Della Guardia <span class="x">×</span> Focus Gravin Beauty</div>
+        <div class="lt-meta"><span><b>21.05.2023</b></span><span>11 pui</span><span>Indie · Joyce · Jump · Jungle · Joker · Jackpot</span></div>
+      </div>
+      <div class="litter-cta">Vezi afișul →</div>
+    </button>
+
+    <button class="litter-card reveal" onclick="openLB('img/litter-i.jpg','img/litter-i-pups.jpg','Litiera I · Aris × Focus Fade To Black')">
+      <div class="litter-letter">I</div>
+      <div class="litter-info">
+        <div class="lt-parents">Aris <span class="x">×</span> Focus Fade To Black</div>
+        <div class="lt-meta"><span><b>Februarie</b></span><span>Litiera lui Focus Iconic Indie</span></div>
+      </div>
+      <div class="litter-cta">Vezi afișul →</div>
+    </button>
+
+    <button class="litter-card reveal" onclick="openLB('img/litter-h.jpg','img/litter-h-pups.jpg','Litiera H · Quantin del Munt Marin × Focus Gravin Beauty')">
+      <div class="litter-letter">H</div>
+      <div class="litter-info">
+        <div class="lt-parents">Quantin del Munt Marin <span class="x">×</span> Focus Gravin Beauty</div>
+        <div class="lt-meta"><span><b>2021</b></span><span>Hot Chili Pepper · Hooligan Hero</span></div>
+      </div>
+      <div class="litter-cta">Vezi afișul →</div>
+    </button>
+
+  </div>
+</section>
+
+<div class="divider" style="margin:54px auto"></div>
+
+<section class="litter-group">
+  <div class="reveal"><div class="eyebrow"><span>Litiere istorice · prima rundă a alfabetului</span></div>
+  <p class="sec-intro" style="margin-top:10px">Câini care au pus temelia liniei Focus, din primii noștri ani.</p>
+  </div>
+  <div class="litter-list">
+
+    <button class="litter-card reveal" onclick="openLB('img/litter-b.jpg','','Litiera B · Ch. Dobergarden Forever Orlando × Focus Reggae Rules')">
+      <div class="litter-letter">B</div>
+      <div class="litter-info">
+        <div class="lt-parents">Ch. Dobergarden Forever Orlando <span class="x">×</span> Focus Reggae Rules</div>
+        <div class="lt-meta"><span>Linie istorică</span></div>
+      </div>
+      <div class="litter-cta">Vezi afișul →</div>
+    </button>
+
+    <button class="litter-card reveal" onclick="openLB('img/litter-z.jpg','','Litiera Z · Ch. Thor del Nasi × Ch. Focus She&rsquo;s Got the Jack')">
+      <div class="litter-letter">Z</div>
+      <div class="litter-info">
+        <div class="lt-parents">Ch. Thor del Nasi <span class="x">×</span> Ch. Focus She's Got the Jack</div>
+        <div class="lt-meta"><span>Linie istorică</span></div>
+      </div>
+      <div class="litter-cta">Vezi afișul →</div>
+    </button>
+
+  </div>
+</section>
+
+<div class="gz-cta-final reveal" style="margin-top:64px">
+  <h2>Te interesează o litieră viitoare?</h2>
+  <p>Litierele noastre sunt planificate, nu permanente. Scrie-ne din timp ce cauți, ca să te putem îndruma spre puiul potrivit.</p>
+  <div class="cta-row">
+    <a class="btn btn-gold" href="https://www.facebook.com/focusdobermann" target="_blank" rel="noopener">Urmărește pe Facebook</a>
+    <a class="btn btn-ghost" href="index.html#contact">Listă de așteptare</a>
+  </div>
+  <div class="cta-phone"><span class="who">Bogdan Turiga</span><a href="tel:+40753555666">+40 753 555 666</a></div>
+</div>
+
+<footer>
+  <div class="fb">Focus <em>Dobermann Kennel</em></div>
+  <div class="footer-social"><a href="https://www.facebook.com/focusdobermann" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/focusdobermann" target="_blank" rel="noopener">Instagram</a></div>
+  <p>© <span class="yr"></span> Focus Dobermann Kennel · București, România</p>
+</footer>
+
+<div class="llb" id="llb" onclick="if(event.target.id==='llb'||event.target.className==='close')closeLB()">
+  <span class="close" onclick="closeLB()">&times;</span>
+  <div class="llb-imgs" id="llbImgs"></div>
+  <div class="llb-cap" id="llbCap"></div>
+</div>
+
+<script>
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.yr').forEach(s=>s.textContent=new Date().getFullYear());
+function openLB(banner,pups,cap){
+  const wrap=document.getElementById('llbImgs');
+  if(!banner){ // planned litter -> just go to contact
+    window.location.href='index.html#contact';return;
+  }
+  let html='<img src="'+banner+'" alt="Afiș litieră">';
+  if(pups) html+='<img src="'+pups+'" alt="Pui">';
+  wrap.innerHTML=html;
+  document.getElementById('llbCap').innerHTML=cap||'';
+  document.getElementById('llb').classList.add('open');
+}
+function closeLB(){document.getElementById('llb').classList.remove('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB();});
+</script>
+<script src="terms.js"></script>
+</body>
+</html>
