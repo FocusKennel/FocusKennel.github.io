@@ -473,7 +473,7 @@ footer p{color:var(--dim);font-size:12.5px}
 .litter-card.planned .lt-tag{display:inline-block;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--blue-bright);border:1px solid var(--line-blue);border-radius:20px;padding:3px 10px;margin-bottom:8px}
 @media(max-width:620px){.litter-card{grid-template-columns:64px 1fr}.litter-cta{display:none}.litter-letter{font-size:38px}}
 
-/* Lightbox litiere (banner + pui) */
+/* Lightbox cuib (banner + pui) */
 .llb{position:fixed;inset:0;z-index:300;background:rgba(7,10,15,.96);display:none;align-items:center;justify-content:center;padding:30px;flex-direction:column;gap:16px;overflow:auto}
 .llb.open{display:flex}
 .llb img{max-width:min(92vw,860px);max-height:80vh;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.7);object-fit:contain}
