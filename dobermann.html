@@ -31,24 +31,54 @@
   <a class="back-link" href="index.html"><span>←</span> Acasă</a>
   <div class="mast-rule">Gazeta Focus · Dobermann de lucru și expoziție</div>
   <h1 class="mast-title">Rasa <em>Dobermann</em></h1>
-  <p class="mast-sub">Ghidul complet al rasei și trei articole de referință, traduse pentru cei care vor să înțeleagă Dobermannul dincolo de aparențe.</p>
+  <p class="mast-sub">Articolul principal — ghidul complet al rasei — plus o bibliotecă de texte de referință, pentru cei care vor să înțeleagă Dobermannul dincolo de aparențe. Deschide ghidul când ești gata.</p>
 </header>
 
-<section class="section" style="padding-top:30px;max-width:1000px">
-  <div class="reveal"><div class="eyebrow"><span>Cuprins</span></div></div>
-  <div class="gz-toc reveal d1">
-    <a href="#cine"><span class="n">01</span><span class="t">Cine este Dobermannul</span></a>
-    <a href="#standard"><span class="n">02</span><span class="t">Standardul rasei (FCI 143)</span></a>
-    <a href="#sanatate"><span class="n">03</span><span class="t">Sănătatea rasei</span></a>
-    <a href="#garantie"><span class="n">04</span><span class="t">BH, ZTP și HD</span></a>
-    <a href="#crescator"><span class="n">05</span><span class="t">Cum recunoști un crescător serios</span></a>
-    <a href="#filosofie"><span class="n">06</span><span class="t">Filosofia noastră de creștere</span></a>
-    <a href="#pui"><span class="n">07</span><span class="t">Ce primești cu un pui Focus</span></a>
-    <a href="#faq"><span class="n">08</span><span class="t">Întrebări frecvente</span></a>
-    <a href="#articole"><span class="n">09</span><span class="t">Articole de referință (3)</span></a>
-  </div>
-</section>
-<div class="divider"></div>
+<!-- ════ ARTICOLUL PRINCIPAL · Ghidul rasei (collapsible) ════ -->
+<section class="section gz-flagship" style="padding-top:30px;max-width:1000px">
+  <div class="gz-feature reveal" id="guideFeature">
+    <div class="gz-feature-head" id="guideToggle" role="button" tabindex="0"
+         aria-expanded="false" aria-controls="guidePanel"
+         onclick="toggleGuide()"
+         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleGuide();}">
+      <div class="gz-feature-main">
+        <div class="gz-feature-eyebrow"><span>Articolul principal</span></div>
+        <h2 class="gz-feature-title">Ghidul complet al <em>rasei Dobermann</em></h2>
+        <p class="gz-feature-sub">Tot ce trebuie să înțelegi înainte de a alege un Dobermann: caracter, standardul FCI, sănătatea rasei, testele care contează cu adevărat și ce înseamnă o creștere responsabilă.</p>
+        <div class="gz-feature-chips">
+          <span>01 · Cine este</span>
+          <span>02 · Standard FCI</span>
+          <span>03 · Sănătate</span>
+          <span>04 · BH · ZTP · HD</span>
+          <span>05 · Crescător serios</span>
+          <span>06 · Filosofia noastră</span>
+          <span>07 · Un pui Focus</span>
+          <span>08 · Întrebări frecvente</span>
+        </div>
+      </div>
+      <div class="gz-feature-action">
+        <span class="gz-feature-count">8 capitole</span>
+        <span class="gz-feature-toggle">
+          <span class="gz-toggle-label">Deschide ghidul</span>
+          <span class="gz-chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="guide-collapse" id="guidePanel" role="region" aria-labelledby="guideToggle">
+      <div class="guide-inner">
+        <div class="gz-toc">
+          <a href="#cine"><span class="n">01</span><span class="t">Cine este Dobermannul</span></a>
+          <a href="#standard"><span class="n">02</span><span class="t">Standardul rasei (FCI 143)</span></a>
+          <a href="#sanatate"><span class="n">03</span><span class="t">Sănătatea rasei</span></a>
+          <a href="#garantie"><span class="n">04</span><span class="t">BH, ZTP și HD</span></a>
+          <a href="#crescator"><span class="n">05</span><span class="t">Cum recunoști un crescător serios</span></a>
+          <a href="#filosofie"><span class="n">06</span><span class="t">Filosofia noastră de creștere</span></a>
+          <a href="#pui"><span class="n">07</span><span class="t">Ce primești cu un pui Focus</span></a>
+          <a href="#faq"><span class="n">08</span><span class="t">Întrebări frecvente</span></a>
+        </div>
 
 <section class="guide-sec" id="cine">
   <div class="eyebrow reveal"><span>01 · Cine este Dobermannul</span></div>
@@ -216,12 +246,16 @@
   <div class="faq-item reveal"><div class="q">Cât trăiește?</div><div class="a">În medie 10–13 ani, cu îngrijire bună și părinți testați de sănătate.</div></div>
   <div class="faq-item reveal"><div class="q">De ce un pui cu părinți testați costă mai mult?</div><div class="a">Pentru că testele, expozițiile, monta planificată și sprijinul pe viață costă. Plătești pentru risc redus și liniște, nu pentru o poză frumoasă.</div></div>
 </section>
+      </div><!-- /.guide-inner -->
+    </div><!-- /.guide-collapse -->
+  </div><!-- /.gz-feature -->
+</section>
 <div class="divider"></div>
 
 <section class="section" id="articole" style="max-width:1100px">
-  <div class="reveal"><div class="eyebrow"><span>09 · Articole de referință</span></div>
-  <h2 class="sec-title">Bibliotecă</h2>
-  <p class="sec-intro">Trei texte serioase despre rasă, traduse de noi în scop educativ — de la doi dintre cei mai respectați specialiști europeni.</p>
+  <div class="reveal"><div class="eyebrow"><span>Biblioteca Gazetei</span></div>
+  <h2 class="sec-title">Articole de referință</h2>
+  <p class="sec-intro">Pe lângă ghidul nostru, trei texte serioase despre rasă — traduse de noi în scop educativ, de la doi dintre cei mai respectați specialiști europeni.</p>
   </div>
   <div class="lib-grid reveal d1">
     <a class="lib-card" href="articol-ghid-crescator.html">
@@ -263,6 +297,18 @@
 
 <script>
 function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+function toggleGuide(){
+  var f=document.getElementById('guideFeature');
+  var h=document.getElementById('guideToggle');
+  var open=f.classList.toggle('open');
+  h.setAttribute('aria-expanded',open);
+  h.querySelector('.gz-toggle-label').textContent=open?'Închide ghidul':'Deschide ghidul';
+  if(open){
+    f.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+  }else{
+    f.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+}
 document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
 const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
