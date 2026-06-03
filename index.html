@@ -130,12 +130,31 @@
 <div class="divider"></div>
 
 <section class="section" id="memoriam">
-  <div class="reveal"><div class="eyebrow"><span>03 — Dogs of the Past</span></div>
-  <h2 class="sec-title">Dogs of the Past</h2>
-  <p class="sec-intro">Câinii care au construit linia Focus. Le datorăm tot ce suntem astăzi.</p>
-  </div>
-  <div class="dog-group reveal">
-    <div class="dogs">
+  <div class="reveal"><div class="eyebrow"><span>03 — Dogs of the Past</span></div></div>
+  <div class="dop-feature reveal" id="dopFeature">
+    <div class="dop-head" id="dopToggle" role="button" tabindex="0"
+         aria-expanded="false" aria-controls="dopPanel"
+         onclick="toggleDop()"
+         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleDop();}">
+      <div class="dop-head-main">
+        <h2 class="dop-title">Dogs of the Past <em>— typisch Focus Dobermann</em></h2>
+        <p class="dop-sub">Câinii care au definit linia noastră. Privește-i pe rând: același tip, același caracter, aceeași amprentă — Dobermannul tipic Focus, generație după generație.</p>
+        <div class="dop-count">10 câini · galeria fondatoare</div>
+      </div>
+      <div class="gz-feature-action dop-action">
+        <span class="gz-feature-count">galerie</span>
+        <span class="gz-feature-toggle">
+          <span class="gz-toggle-label">Vezi câinii</span>
+          <span class="gz-chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div class="dop-collapse" id="dopPanel" role="region" aria-labelledby="dopToggle">
+      <div class="dop-inner">
+        <div class="dog-group">
+          <div class="dogs">
     <a class="dog reveal" href="fade.html" style="text-decoration:none;color:inherit"><div class="photo"><img class="pblur" src="img/fade.jpg" alt="" aria-hidden="true"><img class="pmain" src="img/fade.jpg" alt="Focus Fade To Black" loading="lazy"></div>
       <div class="info"><div class="reg">Femelă · negru</div>
         <h3>Focus Fade To Black</h3>
@@ -171,8 +190,27 @@
         <h3>Focus ZZ Top</h3>
         <div class="mem-dates"><span class="star">✦</span> In memoriam</div>
         <span class="view">Vezi profilul →</span></div></a>
+    <div class="dog reveal"><div class="photo ph"><span class="ph-mark">L</span></div>
+      <div class="info"><div class="reg">Focus Dobermann</div>
+        <h3>Focus Lucky Strike</h3>
+        <div class="mem-dates"><span class="star">✦</span> Dogs of the Past</div></div></div>
+    <div class="dog reveal"><div class="photo ph"><span class="ph-mark">J</span></div>
+      <div class="info"><div class="reg">Focus Dobermann</div>
+        <h3>Focus She's Got The Jack</h3>
+        <div class="mem-dates"><span class="star">✦</span> Dogs of the Past</div></div></div>
+    <div class="dog reveal"><div class="photo ph"><span class="ph-mark">T</span></div>
+      <div class="info"><div class="reg">Focus Dobermann</div>
+        <h3>Focus Nickname Tiny</h3>
+        <div class="mem-dates"><span class="star">✦</span> Dogs of the Past</div></div></div>
+    <div class="dog reveal"><div class="photo ph"><span class="ph-mark">N</span></div>
+      <div class="info"><div class="reg">Focus Dobermann</div>
+        <h3>Focus Neverending Story</h3>
+        <div class="mem-dates"><span class="star">✦</span> Dogs of the Past</div></div></div>
     </div>
-  </div>
+        </div>
+      </div><!-- /.dop-inner -->
+    </div><!-- /.dop-collapse -->
+  </div><!-- /.dop-feature -->
 </section>
 <div class="divider"></div>
 
@@ -229,6 +267,18 @@
 
 <script>
 function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+function toggleDop(){
+  var f=document.getElementById('dopFeature');
+  var h=document.getElementById('dopToggle');
+  var open=f.classList.toggle('open');
+  h.setAttribute('aria-expanded',open);
+  h.querySelector('.gz-toggle-label').textContent=open?'Ascunde câinii':'Vezi câinii';
+  if(open){
+    f.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+  }else{
+    f.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+}
 document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
 const nav=document.getElementById('nav');
 addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40));
