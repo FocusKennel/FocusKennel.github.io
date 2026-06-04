@@ -50,7 +50,7 @@
     </div>
     <div class="news-grid">
 
-      <article class="news-card reveal d1">
+      <a class="news-card reveal d1" href="litters.html">
         <div class="news-media">
           <img class="pblur" src="img/news-cuib.jpg" alt="" aria-hidden="true">
           <img class="pmain" src="img/news-cuib.jpg" alt="Cuib nou Focus pe drum" loading="lazy">
@@ -60,10 +60,11 @@
           <div class="news-meta"><span class="news-date">3 Iunie 2026</span><span class="news-tag">Cuib</span></div>
           <h3>Cuib nou pe drum — sarcină confirmată</h3>
           <p>Un nou cuib Focus este pe drum: sarcina a fost confirmată. Urmează detalii despre părinți și despre lista de așteptare. Mai multe știri în curând.</p>
+          <span class="news-go">Vezi cuiburile →</span>
         </div>
-      </article>
+      </a>
 
-      <article class="news-card reveal d2">
+      <a class="news-card reveal d2" href="articol-ztp.html">
         <div class="news-media">
           <img class="pblur" src="img/news-ztp.jpg" alt="" aria-hidden="true">
           <img class="pmain" src="img/news-ztp.jpg" alt="ZTP Focus — grup" loading="lazy">
@@ -72,8 +73,9 @@
           <div class="news-meta"><span class="news-date">22 Mai 2026</span><span class="news-tag">ZTP</span></div>
           <h3>Trei câini Focus, calificative maxime la ZTP</h3>
           <p>Indie, Joyce și Jump au promovat ZTP cu nota maximă — <strong>V1A</strong>. Joyce a fost desemnată <strong>Best ZTP</strong>.</p>
+          <span class="news-go">De ce contează ZTP →</span>
         </div>
-      </article>
+      </a>
 
       <article class="news-card reveal d3">
         <div class="news-media">
@@ -88,6 +90,15 @@
       </article>
 
     </div>
+  </div>
+</section>
+
+<section class="stats-sec" id="stats">
+  <div class="stats-wrap reveal">
+    <div class="stat-item"><div class="stat-num" data-count="32" data-suffix="+">0</div><div class="stat-label">Ani de reproducere</div></div>
+    <div class="stat-item"><div class="stat-num" data-count="37" data-suffix="">0</div><div class="stat-label">Generații crescute</div></div>
+    <div class="stat-item"><div class="stat-num" data-count="16" data-suffix="+">0</div><div class="stat-label">Câini cu ZTP</div></div>
+    <div class="stat-item"><div class="stat-num" data-count="44" data-suffix="+">0</div><div class="stat-label">Țări cu câini Focus</div></div>
   </div>
 </section>
 
@@ -318,6 +329,21 @@ const heroImg=document.getElementById('heroImg');
 addEventListener('scroll',()=>{const y=scrollY;if(y<innerHeight)heroImg.style.transform='translateY('+(y*0.25)+'px)';});
 const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// Count-up animation pentru bara de statistici
+function animateCount(el){
+  const target=parseInt(el.getAttribute('data-count'),10);
+  const suffix=el.getAttribute('data-suffix')||'';
+  const dur=1400; const start=performance.now();
+  function tick(now){
+    const p=Math.min((now-start)/dur,1);
+    const eased=1-Math.pow(1-p,3);
+    el.textContent=Math.round(eased*target)+suffix;
+    if(p<1)requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const statsIo=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.stat-num').forEach(animateCount);statsIo.unobserve(e.target);}}),{threshold:.4});
+document.querySelectorAll('.stats-wrap').forEach(el=>statsIo.observe(el));
 const navA=document.querySelectorAll('#navLinks a');
 const so=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;navA.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));}}),{rootMargin:'-40% 0px -55% 0px'});
 document.querySelectorAll('section[id]').forEach(s=>so.observe(s));
