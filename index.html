@@ -370,19 +370,20 @@ addEventListener('scroll',()=>{const y=scrollY;if(y<innerHeight)heroImg.style.tr
 const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 // Count-up animation pentru bara de statistici
-function animateCount(el){
+function animateCount(el,i){
   const target=parseInt(el.getAttribute('data-count'),10);
   const suffix=el.getAttribute('data-suffix')||'';
-  const dur=1400; const start=performance.now();
+  const dur=1500; const start=performance.now()+((i||0)*140+220);
   function tick(now){
+    if(now<start){requestAnimationFrame(tick);return;}
     const p=Math.min((now-start)/dur,1);
     const eased=1-Math.pow(1-p,3);
     el.textContent=Math.round(eased*target)+suffix;
-    if(p<1)requestAnimationFrame(tick);
+    if(p<1){requestAnimationFrame(tick);}else{el.textContent=target+suffix;el.classList.add('done');}
   }
   requestAnimationFrame(tick);
 }
-const statsIo=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.stat-num').forEach(animateCount);statsIo.unobserve(e.target);}}),{threshold:.4});
+const statsIo=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.stat-num').forEach((el,i)=>animateCount(el,i));statsIo.unobserve(e.target);}}),{threshold:.4});
 document.querySelectorAll('.stats-wrap').forEach(el=>statsIo.observe(el));
 const navA=document.querySelectorAll('#navLinks a');
 const so=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;navA.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));}}),{rootMargin:'-40% 0px -55% 0px'});

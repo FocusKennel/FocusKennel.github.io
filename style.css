@@ -625,18 +625,51 @@ a.news-card:hover .news-go{letter-spacing:1.2px}
 .lib-card-lead:hover{border-color:var(--gold)}
 
 /* ════ Bara de statistici ════ */
-.stats-sec{padding:0;margin:0}
-.stats-wrap{max-width:1400px;margin:0 auto;padding:34px 5vw;
+.stats-sec{padding:0;margin:0;position:relative;overflow:hidden}
+.stats-sec::before{content:"";position:absolute;left:50%;top:50%;width:62%;height:170%;
+  transform:translate(-50%,-50%);pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse at center,rgba(201,162,77,.11),transparent 68%);
+  animation:statsGlow 6.5s ease-in-out infinite}
+@keyframes statsGlow{0%,100%{opacity:.4;transform:translate(-50%,-50%) scale(1)}
+  50%{opacity:.7;transform:translate(-50%,-50%) scale(1.09)}}
+.stats-wrap{max-width:1400px;margin:0 auto;padding:42px 5vw;position:relative;z-index:1;
   display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
   border-bottom:1px solid var(--line)}
-.stat-item{text-align:center;position:relative}
-.stat-item:not(:last-child)::after{content:"";position:absolute;right:-12px;top:50%;transform:translateY(-50%);
+.stat-item{text-align:center;position:relative;
+  opacity:0;transform:translateY(28px);
+  transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}
+.stats-wrap.in .stat-item{opacity:1;transform:none}
+.stats-wrap.in .stat-item:nth-child(1){transition-delay:0s}
+.stats-wrap.in .stat-item:nth-child(2){transition-delay:.1s}
+.stats-wrap.in .stat-item:nth-child(3){transition-delay:.2s}
+.stats-wrap.in .stat-item:nth-child(4){transition-delay:.3s}
+.stat-item:not(:last-child)::after{content:"";position:absolute;right:-12px;top:42%;transform:translateY(-50%);
   width:1px;height:54px;background:linear-gradient(transparent,var(--line),transparent)}
 .stat-num{font-family:var(--display);font-weight:300;font-size:clamp(38px,6vw,64px);line-height:1;letter-spacing:-1px;
-  background:linear-gradient(120deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.stat-label{margin-top:10px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dim)}
+  font-variant-numeric:tabular-nums;display:inline-block;position:relative;
+  background:linear-gradient(120deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+/* linia-accent care se desenează sub fiecare cifră */
+.stat-num::after{content:"";position:absolute;left:50%;bottom:-13px;transform:translateX(-50%);
+  width:0;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--gold-bright),transparent);
+  transition:width .85s cubic-bezier(.2,.7,.2,1)}
+.stats-wrap.in .stat-num::after{width:46px}
+.stats-wrap.in .stat-item:nth-child(1) .stat-num::after{transition-delay:.45s}
+.stats-wrap.in .stat-item:nth-child(2) .stat-num::after{transition-delay:.55s}
+.stats-wrap.in .stat-item:nth-child(3) .stat-num::after{transition-delay:.65s}
+.stats-wrap.in .stat-item:nth-child(4) .stat-num::after{transition-delay:.75s}
+/* pop + glow auriu când contorul ajunge la final */
+.stat-num.done{animation:statPop .75s ease}
+@keyframes statPop{
+  0%{transform:scale(1);filter:drop-shadow(0 0 0 rgba(231,193,110,0))}
+  38%{transform:scale(1.09);filter:drop-shadow(0 0 16px rgba(231,193,110,.6))}
+  100%{transform:scale(1);filter:drop-shadow(0 0 0 rgba(231,193,110,0))}}
+.stat-item:hover .stat-num{transform:scale(1.05)}
+.stat-item:hover .stat-num::after{width:62px}
+.stat-label{margin-top:24px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dim)}
 @media(max-width:760px){
-  .stats-wrap{grid-template-columns:1fr 1fr;gap:30px 16px;padding:30px 5vw}
+  .stats-wrap{grid-template-columns:1fr 1fr;gap:34px 16px;padding:32px 5vw}
   .stat-item:nth-child(2)::after{display:none}
 }
 
