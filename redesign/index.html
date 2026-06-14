@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dobermann.ro — Focus Kennel × Focus Journal · Breeding Excellence. Advancing Knowledge.</title>
+<meta name="description" content="The most advanced digital platform dedicated to the Dobermann breed. Focus Kennel — FCI elite breeding. Focus Journal — international science, genetics, health, sport and behaviour.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="redesign.css">
+</head>
+<body>
+<div class="bg-fx"></div>
+<div class="scan-overlay" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ───────────────────────── NAV ───────────────────────── -->
+<nav id="nav">
+  <a class="brand" href="#top">
+    <span class="mark">F</span>
+    <span class="brand-words">
+      <b>FOCUS</b>
+      <span class="tag">Kennel · Journal</span>
+    </span>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#explore">Explore</a>
+    <a href="#kennel">Kennel</a>
+    <a href="#journal">Journal</a>
+    <a href="#science">Science</a>
+    <a href="#world">World of Focus</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button class="active" data-lang="en">EN</button>
+      <button data-lang="ro">RO</button>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- ───────────────────────── HERO ───────────────────────── -->
+<header class="hero" id="top">
+  <div class="hero-bg"><img id="heroImg" src="../img/banner.jpg" alt="The dogs of Focus Dobermann Kennel"></div>
+  <div class="hero-grid-fx" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <div class="hero-dual">
+      <span class="hero-pill">FCI · Est. 1994 · Bucharest → International</span>
+      <h1 class="hero-title">FOCUS</h1>
+      <div class="hero-split">
+        <span class="hs-left">Kennel</span>
+        <span class="hs-div" aria-hidden="true"></span>
+        <span class="hs-right">Journal</span>
+      </div>
+      <p class="hero-tagline">Breeding Excellence. <em>Advancing Knowledge.</em></p>
+      <p class="hero-lead">The most advanced digital platform in the world dedicated to a single canine breed — where science, genetics, performance and responsible selection meet modern media.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#explore">Explore the Dobermann</a>
+        <a class="btn btn-ghost" href="#journal">Read the Journal</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-marquee" aria-hidden="true">
+    <div class="hm-track">
+      <span>FCI Standard 143</span><span class="hm-dot">◆</span>
+      <span>Genetics</span><span class="hm-dot">◆</span>
+      <span>DCM Research</span><span class="hm-dot">◆</span>
+      <span>IGP · Protection · SAR</span><span class="hm-dot">◆</span>
+      <span>Biomechanics</span><span class="hm-dot">◆</span>
+      <span>Responsible Breeding</span><span class="hm-dot">◆</span>
+      <span>FCI Standard 143</span><span class="hm-dot">◆</span>
+      <span>Genetics</span><span class="hm-dot">◆</span>
+      <span>DCM Research</span><span class="hm-dot">◆</span>
+      <span>IGP · Protection · SAR</span><span class="hm-dot">◆</span>
+      <span>Biomechanics</span><span class="hm-dot">◆</span>
+      <span>Responsible Breeding</span><span class="hm-dot">◆</span>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><span>Scroll · every scroll teaches something</span><div class="dot"></div></div>
+</header>
+
+<!-- ───────────────────────── EXPLORE THE DOBERMANN ───────────────────────── -->
+<section class="section explore-sec" id="explore">
+  <div class="sec-head reveal">
+    <div class="eyebrow"><span>01 — Core Experience</span></div>
+    <h2 class="sec-title">Explore the <em>Dobermann</em></h2>
+    <p class="sec-intro">An interactive anatomy lab. Choose a lens — anatomy, performance, genetics or the FCI standard — then probe the structure region by region. Each point opens the standard, the biomechanics, and what it means for health and work.</p>
+  </div>
+
+  <div class="explorer reveal" id="explorer">
+    <!-- mode switch -->
+    <div class="mode-rail" role="tablist" aria-label="View mode">
+      <button class="mode-btn active" data-mode="anatomy" role="tab" aria-selected="true">
+        <span class="mb-i">⌬</span><span class="mb-t">Anatomy</span>
+      </button>
+      <button class="mode-btn" data-mode="performance" role="tab" aria-selected="false">
+        <span class="mb-i">⚡</span><span class="mb-t">Performance</span>
+      </button>
+      <button class="mode-btn" data-mode="genetics" role="tab" aria-selected="false">
+        <span class="mb-i">⚇</span><span class="mb-t">Genetics</span>
+      </button>
+      <button class="mode-btn" data-mode="fci" role="tab" aria-selected="false">
+        <span class="mb-i">⊞</span><span class="mb-t">FCI Standard</span>
+      </button>
+    </div>
+
+    <div class="explorer-stage">
+      <!-- LEFT: the interactive dog -->
+      <div class="stage-canvas" id="stageCanvas">
+        <div class="hud hud-tl"><span class="hud-dot"></span> FOCUS · STRUCTURE SCAN</div>
+        <div class="hud hud-tr" id="hudMode">MODE — ANATOMY</div>
+        <div class="hud hud-bl">FCI STANDARD № 143 · DOBERMANN</div>
+        <div class="hud hud-br" id="hudCoord">— · —</div>
+
+        <svg class="dog-svg" id="dogSvg" viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive Dobermann anatomy diagram">
+          <defs>
+            <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1b2531"/>
+              <stop offset="1" stop-color="#0c131c"/>
+            </linearGradient>
+            <linearGradient id="heatGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#4d93d8"/>
+              <stop offset=".55" stop-color="#d8a93f"/>
+              <stop offset="1" stop-color="#e0524b"/>
+            </linearGradient>
+            <filter id="glow"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+
+          <!-- ground line -->
+          <line class="ground" x1="120" y1="498" x2="900" y2="498"/>
+
+          <!-- DOBERMANN — left-facing profile · natural (uncropped) ears + natural (undocked) tail -->
+          <!-- legs first, behind the torso -->
+          <g id="dogLegs">
+            <path class="dog-leg" d="M410 358 C424 358 426 382 422 412 L426 494 C426 500 414 500 412 494 L408 412 C406 386 398 360 410 358 Z"/>
+            <path class="dog-leg" d="M744 350 C760 352 764 378 756 408 L750 494 C750 500 740 500 740 494 L738 430 C732 402 730 352 744 350 Z"/>
+            <path class="dog-leg" d="M442 360 C456 360 458 384 454 414 L458 494 C458 500 446 500 444 494 L440 414 C438 388 430 362 442 360 Z"/>
+            <path class="dog-leg" d="M712 352 C730 354 736 380 726 410 L712 494 C710 500 700 500 700 494 L702 432 C690 404 694 356 712 352 Z"/>
+          </g>
+          <!-- torso + head + arched neck + natural sabre tail -->
+          <path id="dogBody" class="dog-body" d="
+            M208 176 C232 168 252 160 272 156 C290 150 312 143 330 146
+            C360 170 398 208 432 250 C520 254 620 256 716 262
+            C742 256 786 250 818 250 C846 250 866 258 868 272
+            C866 286 842 282 818 284 C788 286 752 288 728 292
+            C736 320 742 348 736 374 C700 372 660 366 624 364
+            C560 360 492 384 448 402 C426 402 410 394 400 378
+            C390 358 388 338 393 320 C380 296 366 268 348 250
+            C332 232 316 214 298 202 C270 196 236 186 208 176 Z"/>
+          <!-- natural drop ear + eye, on the head -->
+          <path class="dog-ear" d="M296 150 C288 150 285 158 288 168 C293 194 305 211 323 219 C330 205 327 182 320 166 C315 154 306 150 296 150 Z"/>
+          <ellipse class="dog-eye" cx="266" cy="180" rx="6.5" ry="4.2" transform="rotate(-18 266 180)"/>
+
+          <!-- ZONES: invisible hit-targets + visible hotspots -->
+          <g id="zones"></g>
+          <g id="hotspots"></g>
+        </svg>
+
+        <div class="stage-hint" id="stageHint">Tap a glowing point on the structure</div>
+      </div>
+
+      <!-- RIGHT: read-out panel -->
+      <aside class="stage-panel" id="stagePanel">
+        <div class="sp-default" id="spDefault">
+          <div class="sp-kicker">Read-out</div>
+          <h3 class="sp-title">Select a region</h3>
+          <p class="sp-text">The Dobermann is built as an athlete: square, muscular, balanced. Pick any pulsing node on the diagram to open its FCI wording, its biomechanics, and why it matters for sport and health.</p>
+          <div class="sp-modechip" id="spModeChip">Anatomy lens active</div>
+          <ul class="sp-quicklist" id="spQuicklist"></ul>
+        </div>
+
+        <div class="sp-detail" id="spDetail" hidden>
+          <button class="sp-back" id="spBack">← all regions</button>
+          <div class="sp-kicker" id="spDKicker">Region</div>
+          <h3 class="sp-title" id="spDTitle">—</h3>
+          <div class="sp-block">
+            <div class="sp-label"><span class="sl-i">⊞</span> FCI Standard</div>
+            <p id="spFci">—</p>
+          </div>
+          <div class="sp-block">
+            <div class="sp-label"><span class="sl-i">⚙</span> Biomechanics</div>
+            <p id="spBio">—</p>
+          </div>
+          <div class="sp-block">
+            <div class="sp-label"><span class="sl-i">★</span> Why it matters</div>
+            <p id="spRel">—</p>
+          </div>
+          <div class="sp-vs">
+            <div class="vs-col vs-ok"><span class="vs-h">Correct</span><span id="spOk">—</span></div>
+            <div class="vs-col vs-bad"><span class="vs-h">Fault</span><span id="spBad">—</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── SCIENCE & GENETICS HUB ───────────────────────── -->
+<section class="section science-sec" id="science">
+  <div class="sec-head reveal">
+    <div class="eyebrow"><span>02 — Science &amp; Genetics</span></div>
+    <h2 class="sec-title">The numbers behind the <em>breed</em></h2>
+    <p class="sec-intro">A lab interface for the things that decide a Dobermann's life — heart, hips, genetic diversity. Selection at Focus is a measurement, not a hope.</p>
+  </div>
+
+  <div class="lab-grid">
+    <article class="lab-card reveal d1">
+      <div class="lab-top"><span class="lab-tag">Cardiac</span><span class="lab-id">DCM-001</span></div>
+      <div class="lab-stat"><span class="ls-num" data-count="58" data-suffix="%">0</span></div>
+      <h3 class="lab-h">Lifetime DCM prevalence</h3>
+      <p class="lab-p">Roughly 3 in 5 Dobermanns develop dilated cardiomyopathy. We require annual Holter + echo on breeding stock — the single most important screen in the breed.</p>
+      <div class="lab-bar"><span style="--w:58%"></span></div>
+    </article>
+
+    <article class="lab-card reveal d2">
+      <div class="lab-top"><span class="lab-tag">Population</span><span class="lab-id">DIV-002</span></div>
+      <div class="lab-stat"><span class="ls-num" data-count="44" data-suffix="+">0</span></div>
+      <h3 class="lab-h">Countries with Focus dogs</h3>
+      <p class="lab-p">A wide, deliberately managed gene flow. Diversity is selected for, not stumbled into — every pairing is scored for relatedness before it happens.</p>
+      <div class="lab-bar"><span style="--w:72%"></span></div>
+    </article>
+
+    <article class="lab-card reveal d3">
+      <div class="lab-top"><span class="lab-tag">Selection</span><span class="lab-id">IDX-003</span></div>
+      <div class="lab-stat"><span class="ls-num" data-count="6" data-suffix="">0</span></div>
+      <h3 class="lab-h">Traits in the selection index</h3>
+      <p class="lab-p">Work, health, conformation, temperament, fertility, diversity — weighted together. A title alone is a weak, distorted genetic signal.</p>
+      <div class="lab-bar"><span style="--w:64%"></span></div>
+    </article>
+
+    <article class="lab-card lab-wide reveal d2" id="coiCard">
+      <div class="lab-top"><span class="lab-tag">Genetics</span><span class="lab-id">COI-004</span></div>
+      <h3 class="lab-h">Inbreeding coefficient (COI) over a pairing</h3>
+      <p class="lab-p">Lower is healthier. We model the coefficient of inbreeding before breeding — the goal is genetic distance, not a famous name repeated on both sides of the pedigree.</p>
+      <div class="coi-track" id="coiTrack">
+        <div class="coi-fill" id="coiFill"></div>
+        <div class="coi-marks"><span>0%</span><span>6.25%</span><span>12.5%</span><span>25%</span></div>
+        <div class="coi-flag" id="coiFlag">target ≤ 6.25%</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ───────────────────────── FOCUS KENNEL — ATHLETE CARDS ───────────────────────── -->
+<section class="section kennel-sec" id="kennel">
+  <div class="sec-head reveal">
+    <div class="eyebrow"><span>03 — Focus Kennel</span></div>
+    <h2 class="sec-title">Every dog is an <em>athlete profile</em></h2>
+    <p class="sec-intro">FCI elite breeding since 1994. Each dog carries a verified record — ZTP, hips, heart, titles. Hover for the dossier.</p>
+  </div>
+
+  <div class="athletes reveal">
+    <a class="athlete" href="../indie.html">
+      <div class="ath-num">01</div>
+      <div class="ath-media"><img src="../img/indie.jpg" alt="Focus Iconic Indie" loading="lazy"></div>
+      <div class="ath-grad"></div>
+      <div class="ath-body">
+        <span class="ath-role">Female · Black</span>
+        <h3 class="ath-name">Focus Iconic Indie</h3>
+        <div class="ath-stats">
+          <span><b>V1A</b>ZTP</span><span><b>A</b>HD</span><span><b>clear</b>vWD</span>
+        </div>
+      </div>
+      <div class="ath-cta">Open dossier →</div>
+    </a>
+
+    <a class="athlete" href="../joyce.html">
+      <div class="ath-num">02</div>
+      <div class="ath-media"><img src="../img/joyce.jpg" alt="Focus Javelin Joyce" loading="lazy"></div>
+      <div class="ath-grad"></div>
+      <div class="ath-body">
+        <span class="ath-role">Female · Brown · 2023</span>
+        <h3 class="ath-name">Focus Javelin Joyce</h3>
+        <div class="ath-stats">
+          <span><b>V1A</b>Best ZTP</span><span><b>A</b>HD</span><span><b>clear</b>DCM</span>
+        </div>
+      </div>
+      <div class="ath-cta">Open dossier →</div>
+    </a>
+
+    <a class="athlete" href="../jump.html">
+      <div class="ath-num">03</div>
+      <div class="ath-media"><img src="../img/jump.jpg" alt="Focus Jump Around" loading="lazy"></div>
+      <div class="ath-grad"></div>
+      <div class="ath-body">
+        <span class="ath-role">Male · Brown · 2023</span>
+        <h3 class="ath-name">Focus Jump Around</h3>
+        <div class="ath-stats">
+          <span><b>V1A</b>ZTP</span><span><b>B</b>HD</span><span><b>Free</b>DCM1/2</span>
+        </div>
+      </div>
+      <div class="ath-cta">Open dossier →</div>
+    </a>
+
+    <a class="athlete" href="../aris.html">
+      <div class="ath-num">04</div>
+      <div class="ath-media"><img src="../img/aris.jpg" alt="Aris" loading="lazy"></div>
+      <div class="ath-grad"></div>
+      <div class="ath-body">
+        <span class="ath-role">Male · Black · 2019</span>
+        <h3 class="ath-name">Aris</h3>
+        <div class="ath-stats">
+          <span><b>RO Ch.</b>Title</span><span><b>B</b>HD</span><span><b>clear</b>Holter</span>
+        </div>
+      </div>
+      <div class="ath-cta">Open dossier →</div>
+    </a>
+  </div>
+  <div class="kennel-foot reveal">
+    <a class="btn btn-ghost" href="../index.html#dogs">All dogs — males &amp; females →</a>
+  </div>
+</section>
+
+<!-- ───────────────────────── FOCUS JOURNAL ───────────────────────── -->
+<section class="section journal-sec" id="journal">
+  <div class="journal-masthead reveal">
+    <div class="jm-rule"></div>
+    <div class="jm-row">
+      <div class="jm-brand">Focus <em>Journal</em></div>
+      <div class="jm-meta"><span>Issue 01</span><span class="jm-sep">·</span><span>June 2026</span><span class="jm-sep">·</span><span>International · Dobermann</span></div>
+    </div>
+    <div class="jm-rule"></div>
+  </div>
+
+  <div class="jcat reveal" id="jcat">
+    <button class="jc active" data-cat="all">All</button>
+    <button class="jc" data-cat="genetics">Genetics</button>
+    <button class="jc" data-cat="health">Health</button>
+    <button class="jc" data-cat="behaviour">Behaviour</button>
+    <button class="jc" data-cat="sport">Sport &amp; Performance</button>
+    <button class="jc" data-cat="fci">FCI Standard</button>
+    <button class="jc" data-cat="owners">Owner Guides</button>
+  </div>
+
+  <div class="jgrid">
+    <a class="jfeatured reveal" href="../articol-igp-genomica.html" data-cat="genetics sport">
+      <span class="jf-kicker">Scientific Article · Hypothesis &amp; Theory</span>
+      <h2 class="jf-title">Beyond the exam score</h2>
+      <p class="jf-lead">Why an IGP title is a weak, distorted genetic signal — and why the constructive path is a multi-trait genomic selection index that fuses working ability, health, conformation and diversity. The Dobermann as a case study.</p>
+      <div class="jf-meta"><span class="jf-author">David Serea-Poplingher</span><span class="jf-read">Read →</span></div>
+      <div class="jf-quote">“A score from one day is not a substitute for an estimated breeding value.”</div>
+    </a>
+
+    <div class="jside">
+      <a class="jcard reveal d1" href="../articol-ztp.html" data-cat="health">
+        <span class="jcard-cat">Health</span>
+        <h3>The heart of a breed is not seen in the ring</h3>
+        <p>DCM at ~58%, the limits of DNA tests, and what to demand from both parents.</p>
+        <span class="jc-read">Read →</span>
+      </a>
+      <a class="jcard reveal d2" href="../ghid-rasa.html" data-cat="owners fci">
+        <span class="jcard-cat">Owner Guide</span>
+        <h3>The complete Dobermann breed guide</h3>
+        <p>FCI standard, breed health, what BH / ZTP / HD mean, and how to read a serious breeder.</p>
+        <span class="jc-read">Read →</span>
+      </a>
+      <a class="jcard reveal d3" href="../articol-selectie.html" data-cat="genetics">
+        <span class="jcard-cat">Genetics</span>
+        <h3>When loving the Dobermann is not enough</h3>
+        <p>Selection, inbreeding and genetic improvement — and why COI is so widely misread.</p>
+        <span class="jc-read">Read →</span>
+      </a>
+      <a class="jcard reveal d1" href="../articol-tip.html" data-cat="fci behaviour">
+        <span class="jcard-cat">FCI Standard</span>
+        <h3>Learning is not an event</h3>
+        <p>Type, proportion and judging: harmony, “the head speaks of the breed”, type vs hyper-type.</p>
+        <span class="jc-read">Read →</span>
+      </a>
+      <a class="jcard reveal d2" href="../articol-ghid-crescator.html" data-cat="owners">
+        <span class="jcard-cat">Owner Guide</span>
+        <h3>How to choose a European Dobermann breeder</h3>
+        <p>Due diligence: why “the parents are Champions” guarantees nothing.</p>
+        <span class="jc-read">Read →</span>
+      </a>
+      <a class="jcard reveal d3" href="../articol-istoric.html" data-cat="owners">
+        <span class="jcard-cat">Story</span>
+        <h3>The story of Focus Kennel</h3>
+        <p>How it began in 1984, and how Graaf Tila lifted the line to a European level.</p>
+        <span class="jc-read">Read →</span>
+      </a>
+    </div>
+  </div>
+  <div class="journal-foot reveal">
+    <a class="btn btn-ghost" href="../dobermann.html">Enter the full Journal →</a>
+  </div>
+</section>
+
+<!-- ───────────────────────── GAMIFICATION ───────────────────────── -->
+<section class="section game-sec" id="game">
+  <div class="sec-head reveal">
+    <div class="eyebrow"><span>04 — Test Yourself</span></div>
+    <h2 class="sec-title">Know the <em>standard</em></h2>
+    <p class="sec-intro">A few quick questions on the FCI Standard 143 and breed health. Earn your level — from Beginner Owner to Breed Specialist.</p>
+  </div>
+
+  <div class="quiz reveal" id="quiz">
+    <div class="quiz-head">
+      <div class="quiz-progress"><span id="quizBar"></span></div>
+      <div class="quiz-count" id="quizCount">01 / 06</div>
+    </div>
+    <div class="quiz-body" id="quizBody"><!-- injected --></div>
+    <div class="quiz-result" id="quizResult" hidden>
+      <div class="qr-badge" id="qrBadge">★</div>
+      <h3 id="qrTitle">—</h3>
+      <p id="qrText">—</p>
+      <div class="qr-score" id="qrScore">—</div>
+      <button class="btn btn-ghost" id="quizRetry">Try again</button>
+    </div>
+  </div>
+
+  <div class="badges reveal">
+    <div class="badge"><span class="bdg-i">◔</span><span class="bdg-t">Beginner Owner</span></div>
+    <div class="badge"><span class="bdg-i">◑</span><span class="bdg-t">Breed Enthusiast</span></div>
+    <div class="badge"><span class="bdg-i">◕</span><span class="bdg-t">Working Dog Handler</span></div>
+    <div class="badge"><span class="bdg-i">●</span><span class="bdg-t">Breed Specialist</span></div>
+  </div>
+</section>
+
+<!-- ───────────────────────── WORLD OF FOCUS ───────────────────────── -->
+<section class="section world-sec" id="world">
+  <div class="sec-head reveal">
+    <div class="eyebrow"><span>05 — World of Focus</span></div>
+    <h2 class="sec-title">Built to <em>work</em></h2>
+    <p class="sec-intro">The Dobermann is a working breed. This is where the structure earns its keep.</p>
+  </div>
+
+  <div class="world-strip reveal">
+    <a class="wtile" href="../articol-igp-genomica.html" style="--bg:url('../img/jump-3.jpg')">
+      <div class="wt-grad"></div><div class="wt-body"><span class="wt-tag">Sport</span><h3>IGP · IPO</h3><p>Tracking, obedience, protection — the classic working trial.</p></div>
+    </a>
+    <a class="wtile" href="../aris.html" style="--bg:url('../img/aris-3.jpg')">
+      <div class="wt-grad"></div><div class="wt-body"><span class="wt-tag">Protection</span><h3>Defense</h3><p>Controlled grip, nerve and recall under pressure.</p></div>
+    </a>
+    <a class="wtile" href="../index.html#dogs" style="--bg:url('../img/jump-8.jpg')">
+      <div class="wt-grad"></div><div class="wt-body"><span class="wt-tag">SAR</span><h3>Search &amp; Rescue</h3><p>Drive and stamina pointed at finding people.</p></div>
+    </a>
+    <a class="wtile" href="../index.html#dogs" style="--bg:url('../img/joyce-7.jpg')">
+      <div class="wt-grad"></div><div class="wt-body"><span class="wt-tag">Show</span><h3>Exhibition</h3><p>Type, movement and presence under FCI judges.</p></div>
+    </a>
+  </div>
+</section>
+
+<!-- ───────────────────────── CONTACT ───────────────────────── -->
+<section class="section contact-sec" id="contact">
+  <div class="sec-head reveal">
+    <div class="eyebrow"><span>06 — Contact</span></div>
+    <h2 class="sec-title">Talk to <em>Focus</em></h2>
+    <p class="sec-intro">For availability, visits, study collaborations or questions about the Focus line — write to us.</p>
+  </div>
+  <div class="contact-grid reveal">
+    <div class="cc"><span class="cc-k">Bogdan Turiga</span><a class="cc-v" href="tel:+40753555666">+40 753 555 666</a></div>
+    <div class="cc"><span class="cc-k">Dr. Cristian Dragomir</span><a class="cc-v" href="tel:+40741223652">+40 741 223 652</a></div>
+    <div class="cc"><span class="cc-k">Email</span><a class="cc-v" href="mailto:focus@dobermann.ro">focus@dobermann.ro</a></div>
+    <div class="cc"><span class="cc-k">Location</span><span class="cc-v">Bucharest, Romania</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-brand">FOCUS <em>Kennel · Journal</em></div>
+  <p class="foot-tag">Breeding Excellence. Advancing Knowledge.</p>
+  <p class="foot-fine">© <span class="yr"></span> Focus Dobermann · dobermann.ro · Bucharest, Romania · <a href="../index.html">View the current live site →</a></p>
+  <p class="foot-fine foot-note">Redesign prototype — concept build. Three.js anatomy model, headless-CMS journal and semantic search are specced in the blueprint.</p>
+</footer>
+
+<script src="redesign.js"></script>
+</body>
+</html>
